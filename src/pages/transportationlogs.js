@@ -19,7 +19,7 @@ import axios from "axios";
 import { Box } from "@mui/system";
 
 
-export default function TLManagementPage() {
+export default function UserFeedbackPage() {
 
   const [revalidateLogsData, setRevalidateLogsData] = useState();
 

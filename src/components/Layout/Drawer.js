@@ -17,6 +17,7 @@ import QueueIcon from '@material-ui/icons/Queue';
 import ListItemText from "@material-ui/core/ListItemText";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import FeedbackIcon from '@material-ui/icons/Feedback';
 import { Home, Motorcycle, Settings, RateReview } from "@material-ui/icons";
 import { Box } from "@material-ui/core";
 import { useHistory, useLocation } from "react-router-dom";
@@ -128,6 +129,11 @@ export default function PersistentDrawerLeft({ children }) {
         title: "User Management",
         url: "/users",
         icon: <AccountCircleIcon />,
+      },
+      {
+        title: "User Feedback",
+        url: "/feedback",
+        icon: <FeedbackIcon />,
       },
       {
         title: "TD Management",

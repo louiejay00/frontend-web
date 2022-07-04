@@ -3,8 +3,6 @@ import {
   CssBaseline,
   ThemeProvider,
   useMediaQuery,
-  Button,
-  Typography,
 } from "@material-ui/core";
 import Drawer from "./components/Layout/Drawer";
 import { useContext, useEffect, useMemo } from "react";
@@ -19,6 +17,8 @@ import TransportationLogsPage from "./pages/transportationlogs";
 import PageNotFound from "./components/screens/PageNotFound";
 import LogoutPage from "./pages/logout";
 import LoginPage from "./pages/Login";
+import ConfigurationsPage from "./pages/configurations";
+import UserFeedbackPage from "./pages/feedback";
 import axios from "axios";
 import AuthContext from "./context/AuthProvider";
 
@@ -115,6 +115,11 @@ function App() {
         component: () => <UserManagementPage />,
       },
       {
+        title: "User Feedback",
+        url: "/feedback",
+        component: () => <UserFeedbackPage />,
+      },
+      {
         title: "TD Management",
         url: "/tricycledrivers",
         component: () => <TDManagementPage />,
@@ -137,6 +142,8 @@ function App() {
       {
         title: "Configurations",
         url: "/configurations",
+        component: () => <ConfigurationsPage/>,
+        
       },
       {
         title: "Logout",
@@ -148,8 +155,8 @@ function App() {
   );
 
   useEffect(() => {
-    axios.defaults.baseURL = process.env.BACKEND_URL;
-    // axios.defaults.baseURL = "http://localhost:5000";
+    // axios.defaults.baseURL = process.env.BACKEND_URL;
+  axios.defaults.baseURL = "http://localhost:5000";
   }, []);
   console.log({ auth });
   if (!auth) {
