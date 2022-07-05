@@ -17,7 +17,6 @@ import {
   import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
   import axios from "axios";
   import { Box } from "@mui/system";
-  import { palette } from '@material-ui/system';
   
   
   export default function UserFeedbackPage() {
@@ -115,9 +114,9 @@ import {
                 // eslint-disable-next-line react/no-array-index-key
                 <TableRow>
                   <TableCell component="th" scope="row">
-                    {data.name}
+                    {data.userName}
                   </TableCell>
-                  <TableCell align="left">{data.email}</TableCell>
+                  <TableCell align="left">{data.userEmail}</TableCell>
                   <TableCell align="left">{data.feedback}</TableCell>
                   <TableCell>
                     
